@@ -1,9 +1,59 @@
-<mxfile host="app.diagrams.net" modified="2023-09-07T17:20:28.074Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" version="21.7.2" etag="7neinGJIcgNcaNIFTyTm" type="github">
+<mxfile host="app.diagrams.net" modified="2023-09-07T17:31:35.999Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.0.0 Safari/537.36" etag="hyhw0cE_H2fbZeRvz2ax" version="21.7.2" type="github">
   <diagram name="Страница — 1" id="rCxJo5MhZ4vbmWMJt02z">
-    <mxGraphModel>
+    <mxGraphModel dx="989" dy="517" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
+        <mxCell id="JILR0RX5SvPw9TXMDlvb-1" value="" style="whiteSpace=wrap;html=1;aspect=fixed;" vertex="1" parent="1">
+          <mxGeometry x="140" y="35" width="530" height="530" as="geometry" />
+        </mxCell>
+        <mxCell id="JILR0RX5SvPw9TXMDlvb-11" value="Будівля" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="365" y="60" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="JILR0RX5SvPw9TXMDlvb-12" value="Хостел" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="365" y="120" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="JILR0RX5SvPw9TXMDlvb-13" value="Міні-готель" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="365" y="180" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="JILR0RX5SvPw9TXMDlvb-14" value="Міський готель" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="365" y="240" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="JILR0RX5SvPw9TXMDlvb-15" value="Апарт-готель" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="365" y="300" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="JILR0RX5SvPw9TXMDlvb-16" value="Бутік-готель" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="365" y="360" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="JILR0RX5SvPw9TXMDlvb-17" value="Бізнес-готель" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="365" y="420" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="JILR0RX5SvPw9TXMDlvb-18" value="Готель-курорт" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="365" y="480" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="JILR0RX5SvPw9TXMDlvb-20" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="JILR0RX5SvPw9TXMDlvb-12" target="JILR0RX5SvPw9TXMDlvb-11">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="620" y="340" as="sourcePoint" />
+            <mxPoint x="670" y="290" as="targetPoint" />
+            <Array as="points">
+              <mxPoint x="405" y="110" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JILR0RX5SvPw9TXMDlvb-21" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="JILR0RX5SvPw9TXMDlvb-13" target="JILR0RX5SvPw9TXMDlvb-12">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="415" y="130" as="sourcePoint" />
+            <mxPoint x="415" y="110" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="JILR0RX5SvPw9TXMDlvb-23" value="" style="endArrow=classic;startArrow=classic;html=1;rounded=0;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" edge="1" parent="1" source="JILR0RX5SvPw9TXMDlvb-14" target="JILR0RX5SvPw9TXMDlvb-13">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="415" y="190" as="sourcePoint" />
+            <mxPoint x="415" y="170" as="targetPoint" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
