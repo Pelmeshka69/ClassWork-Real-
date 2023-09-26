@@ -1,0 +1,7 @@
+﻿  26.09.23.cpp
+C:\Users\Admin\source\repos\26.09.23\26.09.23\26.09.23.cpp(17,32): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+C:\Users\Admin\source\repos\26.09.23\26.09.23\26.09.23.cpp(18,33): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+C:\Users\Admin\source\repos\26.09.23\26.09.23\26.09.23.cpp(20,46): warning C4244: =: преобразование "int" в "float", возможна потеря данных
+C:\Users\Admin\source\repos\26.09.23\26.09.23\26.09.23.cpp(22,39): warning C4244: return: преобразование "float" в "int", возможна потеря данных
+C:\Users\Admin\source\repos\26.09.23\26.09.23\26.09.23.cpp(96,15): warning C4244: аргумент: преобразование "time_t" в "unsigned int", возможна потеря данных
+  26.09.23.vcxproj -> C:\Users\Admin\source\repos\26.09.23\x64\Debug\26.09.23.exe
