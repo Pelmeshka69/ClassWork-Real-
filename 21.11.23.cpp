@@ -59,9 +59,9 @@ public:
 };
 
 void displayAllNotes(vector<Note>& notes) {
-    cout << "\nВсі нотатки:\n";
+    cout << "\nAll notes:\n";
     for (int i = 0; i < notes.size(); i++) {
-        cout << "Нотатка " << i + 1 << ":\n";
+        cout << "Note " << i + 1 << ":\n";
         notes[i].display();
         cout << endl;
     }
@@ -71,37 +71,37 @@ int main() {
     SetConsoleCP(1251);
     SetConsoleOutputCP(1251);
     vector<Note> notes;
-    notes.emplace_back(Year(2023), Month(11), Day(14), Hour(18), Minute(59), "Перша нотатка.");
-    notes.emplace_back(Year(2023), Month(11), Day(15), Hour(12), Minute(30), "Друга нотатка.");
+    notes.emplace_back(Year(2023), Month(11), Day(14), Hour(18), Minute(59), "First note.");
+    notes.emplace_back(Year(2023), Month(11), Day(15), Hour(12), Minute(30), "Second note.");
 
     while (true) {
-        cout << "Виберіть дію:\n1. Додати нотатку\n2. Видалити нотатку\n3. Редагувати нотатку\n4. Вийти\n";
+        cout << "Choose an action:\n1. Add a note\n2. Delete a note\n3. Edit a note\n4. Exit\n";
         int choice;
         cin >> choice;
         if (choice == 1) {
             int y, m, d, h, min;
             string n;
-            cout << "Введіть рік: ";
+            cout << "Enter year: ";
             cin >> y;
-            cout << "Введіть місяць: ";
+            cout << "Enter month: ";
             cin >> m;
-            cout << "Введіть день: ";
+            cout << "Enter day: ";
             cin >> d;
-            cout << "Введіть годину: ";
+            cout << "Enter hour: ";
             cin >> h;
-            cout << "Введіть хвилину: ";
+            cout << "Enter minute: ";
             cin >> min;
-            cout << "Введіть нотатку: ";
+            cout << "Enter note: ";
             cin.ignore();
             getline(cin, n);
             notes.emplace_back(Year(y), Month(m), Day(d), Hour(h), Minute(min), n);
         }
         else if (choice == 2) {
             int index;
-            cout << "Введіть індекс нотатки для видалення: ";
+            cout << "Enter the index of the note to delete: ";
             cin >> index;
             if (index < 0 || index >= notes.size()) {
-                cout << "Неправильний індекс!\n";
+                cout << "Invalid index!\n";
             }
             else {
                 notes.erase(notes.begin() + index);
@@ -110,13 +110,13 @@ int main() {
         else if (choice == 3) {
             int index;
             string new_note;
-            cout << "Введіть індекс нотатки для редагування: ";
+            cout << "Enter the index of the note to edit: ";
             cin >> index;
             if (index < 0 || index >= notes.size()) {
-                cout << "Неправильний індекс!\n";
+                cout << "Invalid index!\n";
             }
             else {
-                cout << "Введіть нову нотатку: ";
+                cout << "Enter new note: ";
                 cin.ignore();
                 getline(cin, new_note);
                 notes[index].edit(new_note);
@@ -126,7 +126,7 @@ int main() {
             break;
         }
         else {
-            cout << "Невідома дія!\n";
+            cout << "Unknown action!\n";
         }
         displayAllNotes(notes);
     }
