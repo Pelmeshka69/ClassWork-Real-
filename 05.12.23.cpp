@@ -6,30 +6,37 @@ using namespace std;
 
 class Weapon {
 public:
-    virtual string getName() = 0; 
+    virtual string getName() = 0;
     unsigned short damage;
     unsigned short weight;
     unsigned short numberOfCartridgesInTheClip;
     unsigned short numberOfClips;
-    unsigned short accuracy; 
+    unsigned short accuracy;
     double rateOfFire;
-    unsigned short getDamage() { return this->damage; }
-    unsigned short getWeight() { return this->weight; }
-    unsigned short getNumberOfCartridgesInTheClip() { return this->numberOfCartridgesInTheClip; }
-    unsigned short getNumberOfClips() { return this->numberOfClips; }
-    unsigned short getAccuracy() { return this->accuracy; }
-    double getRateOfFire() { return this->rateOfFire; }
+
+    void setDamage(unsigned short newDamage) { damage = newDamage; }
+    void setAccuracy(unsigned short newAccuracy) { accuracy = newAccuracy; }
+
+
+    unsigned short getDamage() { return damage; }
+    unsigned short getWeight() { return weight; }
+    unsigned short getNumberOfCartridgesInTheClip() { return numberOfCartridgesInTheClip; }
+    unsigned short getNumberOfClips() { return numberOfClips; }
+    unsigned short getAccuracy() { return accuracy; }
+    double getRateOfFire() { return rateOfFire; }
 };
+
+
 
 class Empty : public Weapon {
 public:
-    string getName() override { return "Empty"; } 
+    string getName() override { return "Empty"; }
     Empty() {
         this->damage = 5;
         this->weight = 0;
         this->numberOfCartridgesInTheClip = 1000;
         this->numberOfClips = 0;
-        this->accuracy = 0.6;
+        this->accuracy = 60;
         this->rateOfFire = 0.9;
     }
 };
@@ -42,7 +49,7 @@ public:
         this->weight = 25;
         this->numberOfCartridgesInTheClip = 17;
         this->numberOfClips = 5;
-        this->accuracy = 0.6;
+        this->accuracy = 60;
         this->rateOfFire = 0.7;
     }
 };
@@ -55,7 +62,7 @@ public:
         this->weight = 90;
         this->numberOfCartridgesInTheClip = 30;
         this->numberOfClips = 4;
-        this->accuracy = 0.7;
+        this->accuracy = 70;
         this->rateOfFire = 0.9;
     }
 };
@@ -68,7 +75,7 @@ public:
         this->weight = 80;
         this->numberOfCartridgesInTheClip = 20;
         this->numberOfClips = 4;
-        this->accuracy = 0.8;
+        this->accuracy = 80;
         this->rateOfFire = 0.9;
     }
 };
@@ -81,7 +88,7 @@ public:
         this->weight = 80;
         this->numberOfCartridgesInTheClip = 7;
         this->numberOfClips = 4;
-        this->accuracy = 0.4;
+        this->accuracy = 40;
         this->rateOfFire = 0.6;
     }
 };
@@ -90,11 +97,13 @@ class Character {
 protected:
     unsigned short hp = 100;
     unsigned short speed = 255;
-    unsigned short armor = 0;
+    unsigned short armor = 0; 
     unsigned short stamina = 0;
     Weapon* weapon;
+
+    
     void getW() {
-        int weaponType = rand() % 5; 
+        int weaponType = rand() % 5;
         switch (weaponType) {
         case 0:
             this->weapon = new Empty();
@@ -113,15 +122,28 @@ protected:
             break;
         }
     }
+
 public:
     Character() {
         getW();
     }
+
+
     void openFire(Character& character) {
-        character.hp -= this->weapon->getDamage();
+        unsigned short actualDamage = weapon->getDamage();
+        if (character.armor > 0) {
+            actualDamage -= (actualDamage * character.armor / 100); 
+        }
+        character.hp -= actualDamage;
     }
-    unsigned short getHp() { return this->hp; } 
-    string getWeaponName() { return this->weapon->getName(); } 
+
+    
+    void setArmor(unsigned short newArmor) { armor = newArmor; }
+
+    
+    unsigned short getHp() { return hp; }
+    string getWeaponName() { return weapon->getName(); }
+
     ~Character() {
         delete weapon;
     }
@@ -137,15 +159,14 @@ public:
     string getName() { return this->name; }
 };
 
-int main()
-{
-    srand(time(0)); 
+int main() {
+    srand(time(0));
     Player first("Player 1"), second("Player 2");
     cout << first.getName() << " Gun: " << first.getWeaponName() << endl;
     cout << second.getName() << " Gun: " << second.getWeaponName() << endl;
-    while (first.getHp() > 0 && second.getHp() > 0) { 
+    while (first.getHp() > 0 && second.getHp() > 0) {
         first.openFire(second);
-        if (second.getHp() > 0) { 
+        if (second.getHp() > 0) {
             second.openFire(first);
         }
     }
